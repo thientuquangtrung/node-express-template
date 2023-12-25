@@ -9,6 +9,7 @@ router.get("/checkstatus", (req, res, next) => {
     });
 });
 
+router.use("/v1/api/auth", require("../Auth/access.route"));
 router.use("/v1/api/post", require("./post.route"));
 
 module.exports = router;
